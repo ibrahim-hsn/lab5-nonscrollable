@@ -544,3 +544,37 @@ h1, h2, h3 { font-weight: inherit; }
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ==========================================================================
+   Coffee treatment for the Midnight Velvet (coffee brand) project
+   ========================================================================== */
+.project-coffee { position: relative; }
+.project-coffee > *:not(.coffee-bg) { position: relative; z-index: 1; }
+
+.coffee-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.coffee-bg::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(183, 122, 74, 0.45) 0%, rgba(183, 122, 74, 0.16) 45%, transparent 72%);
+  filter: blur(34px);
+}
+.coffee-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  width: 170px;
+  height: 170px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%23D9C0A0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 26h30v12a12 12 0 0 1-12 12h-6a12 12 0 0 1-12-12z'/%3E%3Cpath d='M44 28h5a6 6 0 0 1 0 12h-5'/%3E%3Cpath d='M24 10c-2 3 2 5 0 8M34 10c-2 3 2 5 0 8'/%3E%3C/svg%3E") no-repeat center / contain;
+  opacity: 0.1;
+}

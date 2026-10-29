@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
 
       showToast("Opening your email app…");
-      window.location.href = `mailto:Ibrahim..bin.hsn@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:ibrahim.bin.hsn@gmail.com?subject=${subject}&body=${body}`;
     });
   }
 });
